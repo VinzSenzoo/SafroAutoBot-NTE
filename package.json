@@ -1,0 +1,21 @@
+{
+  "name": "NT Exhaust - SafroChain Testnet Auto Bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "VinzSenzoo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@cosmjs/proto-signing": "^0.36.1",
+    "@cosmjs/stargate": "^0.36.1",
+    "axios": "^1.8.4",
+    "blessed": "^0.1.81",
+    "chalk": "^5.4.1",
+    "figlet": "^1.8.1",
+    "https-proxy-agent": "^7.0.6",
+    "socks-proxy-agent": "^8.0.5",
+    "uuid": "^11.1.0"
+  }
+}
