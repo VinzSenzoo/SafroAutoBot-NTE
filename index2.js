@@ -75,8 +75,6 @@ const FaucetHeaders = {
   "accept": "*/*",
   "accept-encoding": "gzip, deflate, br, zstd",
   "accept-language": "en-GB,en-US;q=0.9,en;q=0.8,id;q=0.7,fr;q=0.6,ru;q=0.5,zh-CN;q=0.4,zh;q=0.3",
-  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBocXRkY3pwYXd6dXZkcGJ4YXJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUxODI0OTMsImV4cCI6MjA2MDc1ODQ5M30.khlMFI2z55h7FvYeYt7Nm0gU8Bm9W5vehqVNG6a5HjA",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBocXRkY3pwYXd6dXZkcGJ4YXJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUxODI0OTMsImV4cCI6MjA2MDc1ODQ5M30.khlMFI2z55h7FvYeYt7Nm0gU8Bm9W5vehqVNG6a5HjA",
   "cache-control": "no-cache",
   "content-type": "application/json",
   "origin": "https://faucet.safrochain.com",
@@ -89,8 +87,7 @@ const FaucetHeaders = {
   "sec-fetch-dest": "empty",
   "sec-fetch-mode": "cors",
   "sec-fetch-site": "cross-site",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0 (Edition cdf)",
-  "x-client-info": "supabase-js-web/2.49.4"
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0 (Edition cdf)"
 };
 
 const requestControllers = new Set();
@@ -376,7 +373,7 @@ async function performLogin(address, proxyUrl) {
 }
 
 async function performClaimFaucet(address, proxyUrl) {
-  const url = "https://phqtdczpawzuvdpbxarn.supabase.co/functions/v1/safro-transaction";
+  const url = "https://faucetapi.safrochain.com/api/transaction";
   const payload = { receiver: address };
   let retries = 0;
   const maxRetries = 6;
@@ -1392,5 +1389,6 @@ setTimeout(() => {
   adjustLayout();
   screen.on("resize", adjustLayout);
 }, 100);
+
 
 initialize();
