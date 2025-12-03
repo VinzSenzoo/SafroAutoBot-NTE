@@ -87,6 +87,7 @@ const FaucetHeaders = {
   "sec-fetch-dest": "empty",
   "sec-fetch-mode": "cors",
   "sec-fetch-site": "cross-site",
+  "x-api-key": "7abb2035240cb8dc4538d14e6dca03363043268cc55dacb64c06c436743a27c0",
   "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0 (Edition cdf)"
 };
 
@@ -1392,3 +1393,4 @@ setTimeout(() => {
 
 
 initialize();
+
